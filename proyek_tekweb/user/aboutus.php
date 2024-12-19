@@ -275,25 +275,21 @@ a:hover {
   height: auto;
   display: block;
 }
-.img-1{
+.img-1{ /*cart 1*/
   position: absolute;
   display: block;
-  left: -160px;
-  top: -50px;
+  left:20px;
+  top: 10px;
   z-index: 5;
-  width: calc(80% + 160px);
-  transform: translate3d(0, 0, 45px) perspective(100px);
+  width: calc(8% + 120px);
+  transform:rotate(-30deg) translate3d(0, 0, 45px) perspective(100px) ;
   opacity: 1;
-  pointer-events: auto;
+  pointer-events:stroke;
   transition: transform 400ms 1200ms ease, opacity 400ms 1200ms ease;
+  
 }
-.pricing:checked ~ .card-3d-wrap .card-3d-wrapper .img-1 {
-  opacity: 0;
-  transform: translate3d(-50px, 25px, 45px) perspective(100px);
-  pointer-events: none;
-  transition: transform 400ms ease, opacity 200ms 150ms ease;
-}
-.img-2 {
+
+.img-2 { /*background*/
   position: absolute;
   display: block;
   left: 0;
@@ -305,13 +301,13 @@ a:hover {
   width: 100%;
   transform: translate3d(0, 0, 15px) perspective(100px);
 }
-.img-3{
+.img-3{ /*sembako*/
   position: absolute;
   display: block;
-  right: -20px;
-  top: -40px;
+  right: 0px;
+  top: -0px;
   z-index: 5;
-  width: calc(60% + 20px);
+  width: calc(30% + 20px);
   transform: translate3d(0, 0, 55px) perspective(100px) scale(1);
   opacity: 1;
   pointer-events: auto;
@@ -326,10 +322,10 @@ a:hover {
 .img-6{
   position: absolute;
   display: block;
-  right: -20px;
-  bottom: -55px;
+  right: 1px;
+  bottom: -215px;
   z-index: 5;
-  width: calc(20% + 30px);
+  width: calc(20% + 50px);
   transform: translate3d(0, 0, 25px) perspective(100px) scale(1);
   opacity: 1;
   pointer-events: auto;
@@ -342,17 +338,18 @@ a:hover {
   transition: transform 400ms ease, opacity 200ms 150ms ease;
 }
 
-.img-4{
+.img-4{ /*think*/
   position: absolute;
   display: block;
   left: -60px;
   top: -60px;
   z-index: 5;
-  width: calc(65% + 60px);
-  transform: translate3d(0, 0, 45px) perspective(100px) scale(0.5);
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 400ms ease, opacity 200ms 150ms ease;
+  width: calc(8% + 200px);
+  transform:rotate(-35deg) translate3d(0, 0, 45px) perspective(100px) ;
+  opacity: 1;
+  pointer-events:stroke;
+  transition: transform 400ms 1200ms ease, opacity 400ms 1200ms ease;
+  
 }
 .pricing:checked ~ .card-3d-wrap .card-3d-wrapper .img-4 {
   opacity: 1;
@@ -360,13 +357,13 @@ a:hover {
   transform: translate3d(0, 0, 45px) perspective(100px) scale(1);
   transition: transform 400ms 1200ms ease, opacity 300ms 1200ms ease;
 }
-.img-5{
+.img-5{ /*cart 2*/
   position: absolute;
   display: block;
-  right: -70px;
-  top: -50px;
+  right: -60px;
+  top: -10px;
   z-index: 6;
-  width: calc(60% + 70px);
+  width: calc(40% + 50px);
   transform: translate3d(0, 0, 35px) perspective(100px) scale(0.5) rotate(0deg);
   opacity: 0;
   pointer-events: none;
@@ -419,49 +416,43 @@ a:hover {
             <div class="col-12 text-center align-self-center py-5">
                 <div class="section text-center py-5 py-md-0">
                       <input class="pricing" type="checkbox" id="pricing" name="pricing"/>
-                      <label for="pricing"><span class="block-diff">ABOUT US</span>
-                                            <span class="">WHY US</span>
-                                          </label>
+                      <label for="pricing"><span class="block-diff">ABOUT US</span><p class="mx-5">WHY US?</p>                                         </label>
                     <div class="card-3d-wrap mx-auto">
                         <div class="card-3d-wrapper">
                             <div class="card-front">
                                 <div class="pricing-wrap">
-                                    <h4 class="mb-5">ABOUT US</h4>
-                                    <h2 class="mb-2"><sup>$</sup>39 / 4<sup>hrs</sup></h2>
-                                    <p class="mb-4">per person</p>
-                                    <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
-                                    <p class="mb-4">Drina, Serbia</p>
-                                    <a href="#0" class="link">Choose Date</a>
+                                    <h4 class="mb-3">ABOUT US</h4>
+                                    <p class="mb-4">"Toko Kelontong tidak menjual lontong"</p>
+                                    <h1 class="m"></h5>Kepuasan anda adalah kewajiban kami></h5>
+                                    <a href="#0" class="link">Yuk belanja!</a>
                                     <div class="img-wrap img-2">
-                                        <img src="https://assets.codepen.io/1462889/sea.png" alt="">
+                                        <img src="assets/backgroundAboutUs.png" alt="">
                                     </div>
                                     <div class="img-wrap img-1">
-                                        <img src="https://assets.codepen.io/1462889/kayak.png" alt="">
+                                        <img src="assets/cart-removebg-preview.png" alt="">
                                     </div>
                                     <div class="img-wrap img-3">
-                                        <img src="https://assets.codepen.io/1462889/water.png" alt="">
+                                        <img src="assets/sembako-png-1-removebg-preview (1).png" alt="">
                                     </div>
                                     <div class="img-wrap img-6">
-                                        <img src="https://assets.codepen.io/1462889/Stone.png" alt="">
+                                        <img src="assets/bear.png" alt="">
                                     </div>
                                   </div>
                               </div>
                             <div class="card-back">
                                 <div class="pricing-wrap">
-                                    <h4 class="mb-5">Camping</h4>
-                                    <h2 class="mb-2"><sup>$</sup>29 / 8<sup>hrs</sup></h2>
-                                    <p class="mb-4">per person</p>
-                                    <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
-                                    <p class="mb-4">Tara, Serbia</p>
-                                    <a href="#0" class="link">Choose Date</a>
+                                  <h4 class="mb-3">WHY US?</h4>
+                                  <p class="mb-4">Kami menyediakan berbagai macam perlengkapan loch</p>
+                                  <h1 class="m"></h5>Kepuasan anda adalah kewajiban kami</h5>
+                                  <a href="#0" class="link">Yuk belanja!</a>
                                     <div class="img-wrap img-2">
                                         <img src="https://assets.codepen.io/1462889/grass.png" alt="">
                                     </div>
                                     <div class="img-wrap img-4">
-                                        <img src="https://assets.codepen.io/1462889/camp.png" alt="">
+                                        <img src="assets/think-removebg-preview.png" alt="">
                                     </div>
                                     <div class="img-wrap img-5">
-                                        <img src="https://assets.codepen.io/1462889/Ivy.png" alt="">
+                                        <img src="assets/cart-removebg-preview.png" alt="">
                                     </div>
                                     <div class="img-wrap img-7">
                                         <img src="https://assets.codepen.io/1462889/IvyRock.png" alt="">
