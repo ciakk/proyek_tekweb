@@ -22,7 +22,7 @@ body{
 	font-size: 15px;
 	line-height: 1.7;
 	color: #102770;
-	background-color: #ffeba7;
+	background-image:url(assets/pasarBG.jpg);
 	overflow-x: hidden;
 }
 a {
@@ -313,12 +313,7 @@ a:hover {
   pointer-events: auto;
   transition: transform 300ms 1300ms ease, opacity 200ms 1300ms ease;
 }
-.pricing:checked ~ .card-3d-wrap .card-3d-wrapper .img-3 {
-  opacity: 0;
-  transform: translate3d(-50px, 5px, 55px) perspective(100px) scale(0.4);
-  pointer-events: none;
-  transition: transform 400ms ease, opacity 200ms 150ms ease;
-}
+
 .img-6{
   position: absolute;
   display: block;
@@ -331,12 +326,7 @@ a:hover {
   pointer-events: auto;
   transition: transform 300ms 1300ms ease, opacity 200ms 1300ms ease;
 }
-.pricing:checked ~ .card-3d-wrap .card-3d-wrapper .img-6 {
-  opacity: 0;
-  transform: translate3d(0, 0, 25px) perspective(100px) scale(0.4);
-  pointer-events: none;
-  transition: transform 400ms ease, opacity 200ms 150ms ease;
-}
+
 
 .img-4{ /*think*/
   position: absolute;
@@ -409,7 +399,50 @@ a:hover {
 	width: auto;
 	display: block;
 }
+
+ /* Lingkaran biru tua sebagai elemen referensi */
+ .circle {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(61, 71, 133); /* Biru tua */
+            border-radius: 50%;
+            margin: 50px auto 0;
+        }
+
+        /* Logo Skibidi */
+        .floating-logo {
+            position: absolute;
+            top: 30px; /* Atur jarak dari atas lingkaran */
+            left: 70%; /* Pusatkan secara horizontal */
+            transform: translateX(-50%); /* Koreksi agar tepat di tengah */
+            width: 500px;
+            height: 200px;
+            background-image: url('assets/Logo_Sikibdi_mart-removebg-preview.png'); /* Gambar logo */
+            background-size: cover;
+            background-position: center;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Animasi floating */
+        @keyframes float {
+            0% {
+                transform: translate(-50%, 0);
+            }
+            50% {
+                transform: translate(-50%, -20px);
+            }
+            100% {
+                transform: translate(-50%, 0);
+            }
+        }
+
 </style>
+ <!-- Lingkaran Biru dengan Logo Skibidi -->
+ <div class="circle">
+  <div class="floating-logo"></div>
+</div>
+
 <div class="section over-hide">
     <div class="container">
         <div class="row full-height justify-content-center">
