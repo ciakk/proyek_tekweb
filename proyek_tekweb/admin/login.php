@@ -12,15 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "SELECT password FROM users WHERE username = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $username);
-        $stmt->execute();
+        $user = $stmt->execute();
         $stmt->store_result();
         $stmt->bind_result($db_password);
-        $user = $stmt->fetch();
+        $stmt-> fetch();
 
         if ($stmt->num_rows > 0) {
-            $user_password = $user['password'];
            
-            if (password_verify($password,$user_password)) {
+            if (password_verify($password,$db_password)) {
                 echo "Login berhasil!";
                 $_SESSION['login'] = TRUE;
                 header('Location: ../admin/product.php');
@@ -31,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Username tidak ditemukan";
         }
 
-        $stmt->close();
+        // $stmt->close();
     } else {
         echo "Harap isi username dan password!";
     }
