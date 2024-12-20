@@ -2,8 +2,8 @@
     if (isset($_POST['username']) && isset($_POST['password'])) {
         require("../includes/koneksi.php");
         $username = $_POST['username'];
-        // $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
-         $password = $_POST['password'];
+        $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
+         // $password = $_POST['password'];
         
         $sql = "INSERT INTO users (username,password) VALUES (?,?)";
     
